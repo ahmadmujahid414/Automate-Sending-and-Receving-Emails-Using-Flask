@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  function loadlink(){
+         $('#div1').load("{{url_for('Main_R')}}",function () {
+              $(this).unwrap();
+               });
+                }
+
+            loadlink(); 
+          setInterval(function(){
+                     loadlink() 
+              }, 7000);
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Starting the Application</h2></div>
+
+
+
+</body>
+</html>
